@@ -1,4 +1,6 @@
 console.log('linked')
+// ====================== Game Flow ======================= //
+// Clear the canvas => shrek alive? => render shrek, check for collision => render donkey
 // ====================== Global DOM / Variables ======================= //
 let movement = document.getElementById('movement')
 let game = document.getElementById('game')
@@ -26,10 +28,11 @@ class Crawler {
         }
     }
 }
-
+// ====================== PAINT INITIAL SCREEN ======================= //
+// EVENT LISTENERS
 window.addEventListener('DOMContentLoaded', function(e) {
     shrek = new Crawler(10, 20, '#00ff00', 20, 20)
     donkey = new Crawler(100, 100, '#ff0000', 40, 80)
-    shrek.render()
-    donkey.render()
+    const runGame = this.setInterval(gameLoop, 120)
 })
+document.addEventListener('keydown', movementHandler)
