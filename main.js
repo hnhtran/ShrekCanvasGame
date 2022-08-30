@@ -22,10 +22,10 @@ class Crawler {
 
         this.render = function() {
             ctx.fillStyle = this.color
-            ctx.fillRect(this.x, this.y, this.width, this,height)
+            ctx.fillRect(this.x, this.y, this.width, this.height)
         }
     }
 }
-const rambo = new Crawler(5, 5, '#blue', 40, 100)
+const rambo = new Crawler(5, 5, 'blue', 40, 100)
 console.log(rambo)
 rambo.render()
