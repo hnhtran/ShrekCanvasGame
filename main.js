@@ -28,11 +28,15 @@ class Crawler {
         }
     }
 }
+// ====================== KEYBOARD INTERACTION LOGIC ======================= //
+const movementHandler = (e) => {
+    console.log(`movement: ${e.key}`)
+}
 // ====================== PAINT INITIAL SCREEN ======================= //
 // EVENT LISTENERS
 window.addEventListener('DOMContentLoaded', function(e) {
     shrek = new Crawler(10, 20, '#00ff00', 20, 20)
     donkey = new Crawler(100, 100, '#ff0000', 40, 80)
-    const runGame = this.setInterval(gameLoop, 120)
+    // const runGame = this.setInterval(gameLoop, 120)
 })
 document.addEventListener('keydown', movementHandler)
