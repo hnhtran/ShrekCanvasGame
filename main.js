@@ -26,6 +26,10 @@ class Crawler {
         }
     }
 }
-const rambo = new Crawler(5, 5, 'blue', 40, 100)
-console.log(rambo)
-rambo.render()
+
+window.addEventListener('DOMContentLoaded', function(e) {
+    shrek = new Crawler(10, 20, '#00ff00', 20, 20)
+    donkey = new Crawler(100, 100, '#ff0000', 40, 80)
+    shrek.render()
+    donkey.render()
+})
